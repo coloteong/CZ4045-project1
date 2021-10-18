@@ -1,6 +1,8 @@
+#%%
 import spacy
 from collections import Counter
 from nltk.tokenize import sent_tokenize
+from spacy import displacy
 
 nlp = spacy.load("en_core_web_sm")
 
@@ -25,13 +27,19 @@ def get_adjective_phrases(text) -> list:
         it is more often in the form of `acomp` or `amod`, we immediately add this to our phrase
         since this is the main constituent of the adjective phrase
         """
-		if (token.pos_ == 'ADJ') and (token.dep_ in ['ROOT', 'acomp', 'amod']):
+		# if (token.pos_ == 'ADJ') and (token.dep_ in ['ROOT', 'acomp', 'amod']):
+		if (token.pos_ == 'ADJ'): 
+			try:
+				print(f"adjective found: {token.text}, context: {doc[token.i-1], doc[token.i], doc[token.i+1]}")
+			except IndexError: 
+				pass
 			phrase += token.text
 			adjective_position = token.i
 			for subtoken in token.children:
 				# first rule: if there is an adverb that modifies the adjective
 				# we add it to the phrase in front of the adjective
-				if (subtoken.pos_ == 'ADV') and (subtoken.dep_ == 'advmod'):
+				# if (subtoken.pos_ == 'ADV') and (subtoken.dep_ == 'advmod'):
+				if (subtoken.pos_ == 'ADV'):
 					phrase = subtoken.text + ' ' + phrase
 				# second rule: if there is a preposition - indicating that
 				# there is an object that gives us more info about the prep
@@ -44,12 +52,24 @@ def get_adjective_phrases(text) -> list:
 					except TypeError:
 						pass
 		# need to fix so that it does not get random adverbs and adjectives
-		"""elif (token.pos_ == 'AUX') and (token.dep_ == 'ROOT'):
-            for subtoken in token.children:
-                if subtoken.dep_ == 'advmod':
-                    phrase += subtoken.text + ' '
-                if subtoken.dep_ == 'acomp':
-                    phrase += subtoken.text + ' '"""
+		elif (token.pos_ == 'AUX') and (token.dep_ == 'ROOT'):
+		# elif (token.pos_ == 'AUX'):
+			adv = adj =  None
+			for subtoken in token.children:
+				if subtoken.dep_ == 'advmod':
+					print(subtoken)
+					if adv == None:
+						adv = subtoken
+					else:
+						print(f"duplicate adverb in subtree: {adv}")
+				if subtoken.dep_ == 'acomp':
+					if adj == None:
+						adj = subtoken
+					else:
+						print(f"duplicate adjective in subtree: {adj}")
+				if adv != None and adj != None:
+					if adv.i +1 == adj.i:
+						phrase += adv.text + " " + adj.text + " "
 		# since it is a phrase, it needs to have more than one word
 		# i.e. a lone adjective does not constitute an adjective phrase
 		if len(phrase.split()) > 1:
@@ -68,5 +88,7 @@ def get_list_of_phrases(text: str):
 
 
 if __name__ == '__main__':
-	get_adjective_phrases(
+	phrases = get_adjective_phrases(
 		"I guess it's classified as fast food since the whole process is similar to what you'd experience at subway but the taste is far beyond your typical tofu wrap.")
+
+	print(f"adjective phrases found: {phrases}")
