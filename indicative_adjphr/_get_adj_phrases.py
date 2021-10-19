@@ -53,11 +53,11 @@ def get_adjective_phrases(text) -> list:
 				if subtoken.dep_ == 'advmod':
 					if adv == None:
 						adv = subtoken
-					else:
+					#else:
 				if subtoken.dep_ == 'acomp':
 					if adj == None:
 						adj = subtoken
-					else:
+					#else:
 				if adv != None and adj != None:
 					if adv.i +1 == adj.i:
 						phrase += adv.text + " " + adj.text + " "
