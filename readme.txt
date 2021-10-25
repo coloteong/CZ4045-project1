@@ -1,0 +1,69 @@
+An installation guide on how to setup your system
+1. Download Anaconda at: https://www.anaconda.com/products/individual
+
+2. Build anaconda environment from yml file, environment.yml. 
+	a. conda env create -f environment.yml
+	b. conda activate cz4045-2
+	c. conda install spaCy
+	d. python -m spacy download en_core_web_sm
+    Note: fasttext package may need additional steps to install, please follow https://medium.com/@oleg.tarasov/building-fasttext-python-wrapper-from-source-under-windows-68e693a68cbb to successfully install fasttext
+	
+File name:
+Purpose:
+How to use:
+Explanation of sample output:
+
+
+
+1. Dataset Analysis
+	a. Tokenization and Stemming, POS tagging
+		
+		File name: tokenization.ipynb
+		Purpose: Documentation of the process of tokenization, stemming and POS tagging.
+		How to use: Run all cells
+		Explanation of sample output: Provided in the notebook
+		
+		
+	c. Writing Style
+		
+		File name: writing_style.ipynb
+		Purpose: Documentation of the process of understanding writing styles
+		How to use: Run all cells
+		Explanation of sample output: Provided in the notebook
+	
+	
+	d. Most Frequent (Noun - Adjective) Pairs for each rating
+	
+		File name: 2.4 Most Frequent (Noun - Adjective) Pairs.ipynb
+		Purpose: Documentation of the process of retriving indicative noun-adjective pairs
+		How to use: Run all cells
+		Explanation of sample output: Provided in the notebook
+	
+
+2. Extraction of indicative adjective phrases
+
+	File name: indicative_adjective.ipynb
+	Purpose: Documentation of the process of retriving indicative adjective phrases
+	How to use: Run all cells
+	Explanation of sample output: Provided in the notebook
+
+3. Application
+
+	Folder name: last
+	Purpose: Command line interface to generate text from prompt
+	How to use: 1. Open Anaconda Prompt terminal
+                2. Ensure environment cz4045-2 is activated and 'last' folder is unzipped
+                3. Run this command: 'python run_eval.py --model_type=gpt2 --model_name_or_path=last/checkpoint-420000 --length=60 --repetition_penalty=2.0'
+                4. Type prompt and enter
+	Explanation of sample output: Output text is automatically generated from our GPT2 model that is finetuned on Yelp dataset (full)
+
+How to use your system(e.g command lines, input format, parameters)
+
+
+
+EXplanations of sample output obtained from your system
+
+File name:
+Purpose:
+How to use:
+Explanation of sample output:
