@@ -51,15 +51,9 @@ Directory:
 ├── 3.2\ Most\ Frequent\ Noun-Adj\ Pair
 │   └── Most\ Frequent\ (Noun\ -\ Adjective)\ Pairs.ipynb
 ├── 3.2\ Writing\ Style
-│   ├── __pycache__
-│   │   ├── get_random_urls.cpython-39.pyc
-│   │   └── get_urls.cpython-39.pyc
 │   ├── get_urls.py
 │   └── writing_style.ipynb
 ├── 3.3\ Indicative\ Adjective\ Phrases
-│   ├── __pycache__
-│   │   ├── _get_adj_phrases.cpython-39.pyc
-│   │   └── get_adj_phrases.cpython-39.pyc
 │   └── indicative_adjective.ipynb
 ├── data
 │   ├── reviewSamples20.json
