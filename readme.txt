@@ -66,6 +66,5 @@ Directory:
 ├── readme.txt
 ├── run_eval.py
 ├── run_lm_finetuning.py
-├── test_trainer
 └── tokenization.ipynb
 
