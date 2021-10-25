@@ -42,8 +42,12 @@ An installation guide on how to setup your system
 	Purpose: Command line interface to generate text from prompt
 	How to use: 1. Open Anaconda Prompt terminal
                     2. Ensure environment cz4045-2 is activated and 'last' folder is unzipped
-                    3. Run this command: 'python run_eval.py --model_type=gpt2 --model_name_or_path=last/checkpoint-420000 --length=60 --repetition_penalty=2.0'
-                    4. Type prompt and enter
+                    3. Run this command: 'python run_eval.py \
+		    --model_type=gpt2 \
+		    --model_name_or_path=last/checkpoint-420000 \
+		    --length=60 \
+		    --repetition_penalty=2.0'
+                    4. Type prompt and enter (the prompt should be a few words or a phrase which you want to use to start the review)
 	Explanation of sample output: Output text is automatically generated from our GPT2 model that is finetuned on Yelp dataset (full)
 
 Directory:
