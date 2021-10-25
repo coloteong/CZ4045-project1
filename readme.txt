@@ -42,8 +42,12 @@ An installation guide on how to setup your system
 	Purpose: Command line interface to generate text from prompt
 	How to use: 1. Open Anaconda Prompt terminal
                     2. Ensure environment cz4045-2 is activated and 'last' folder is unzipped
-                    3. Run this command: 'python run_eval.py --model_type=gpt2 --model_name_or_path=last/checkpoint-420000 --length=60 --repetition_penalty=2.0'
-                    4. Type prompt and enter
+                    3. Run this command: 'python run_eval.py \
+		    --model_type=gpt2 \
+		    --model_name_or_path=last/checkpoint-420000 \
+		    --length=60 \
+		    --repetition_penalty=2.0'
+                    4. Type prompt and enter (the prompt should be a few words or a phrase which you want to use to start the review)
 	Explanation of sample output: Output text is automatically generated from our GPT2 model that is finetuned on Yelp dataset (full)
 
 Directory:
@@ -51,15 +55,9 @@ Directory:
 ├── 3.2\ Most\ Frequent\ Noun-Adj\ Pair
 │   └── Most\ Frequent\ (Noun\ -\ Adjective)\ Pairs.ipynb
 ├── 3.2\ Writing\ Style
-│   ├── __pycache__
-│   │   ├── get_random_urls.cpython-39.pyc
-│   │   └── get_urls.cpython-39.pyc
 │   ├── get_urls.py
 │   └── writing_style.ipynb
 ├── 3.3\ Indicative\ Adjective\ Phrases
-│   ├── __pycache__
-│   │   ├── _get_adj_phrases.cpython-39.pyc
-│   │   └── get_adj_phrases.cpython-39.pyc
 │   └── indicative_adjective.ipynb
 ├── data
 │   ├── reviewSamples20.json
@@ -68,6 +66,5 @@ Directory:
 ├── readme.txt
 ├── run_eval.py
 ├── run_lm_finetuning.py
-├── test_trainer
 └── tokenization.ipynb
 
