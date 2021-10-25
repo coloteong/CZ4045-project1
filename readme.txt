@@ -49,9 +49,12 @@ Explanation of sample output:
 
 3. Application
 
-	File name:
-	Purpose:
-	How to use:
+	Folder name: last
+	Purpose: Command line interface to generate text from prompt
+	How to use: 1. Open Anaconda Prompt terminal
+                2. Ensure environment cz4045-2 is activated
+                3. Run this command: 'python run_eval.py --model_type=gpt2 --model_name_or_path=last/checkpoint-420000 --length=60 --repetition_penalty=2.0'
+                4. Type prompt and enter
 	Explanation of sample output:
 
 How to use your system(e.g command lines, input format, parameters)
