@@ -2,10 +2,11 @@ An installation guide on how to setup your system
 1. Download Anaconda at: https://www.anaconda.com/products/individual
 
 2. Build anaconda environment from yml file, environment.yml. 
-	a. conda env create -f <path_to_yaml_file>
+	a. conda env create -f environment.yml
 	b. conda activate cz4045-2
 	c. conda install spaCy
 	d. python -m spacy download en_core_web_sm
+    Note: fasttext package may need additional steps to install, please follow https://medium.com/@oleg.tarasov/building-fasttext-python-wrapper-from-source-under-windows-68e693a68cbb to successfully install fasttext
 	
 File name:
 Purpose:
@@ -25,7 +26,7 @@ Explanation of sample output:
 		
 	c. Writing Style
 		
-		File name: claudia_tries.ipynb
+		File name: writing_style.ipynb
 		Purpose: Documentation of the process of understanding writing styles
 		How to use: Run all cells
 		Explanation of sample output: Provided in the notebook
