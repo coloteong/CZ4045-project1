@@ -7,32 +7,23 @@ An installation guide on how to setup your system
 	c. conda install spaCy
 	d. python -m spacy download en_core_web_sm
     Note: fasttext package may need additional steps to install, please follow https://medium.com/@oleg.tarasov/building-fasttext-python-wrapper-from-source-under-windows-68e693a68cbb to successfully install fasttext
-	
-File name:
-Purpose:
-How to use:
-Explanation of sample output:
-
-
 
 1. Dataset Analysis
-	a. Tokenization and Stemming, POS tagging
+	a. Tokenization, Stemming and POS tagging
 		
 		File name: tokenization.ipynb
 		Purpose: Documentation of the process of tokenization, stemming and POS tagging.
 		How to use: Run all cells
 		Explanation of sample output: Provided in the notebook
 		
-		
-	c. Writing Style
+	b. Writing Style
 		
 		File name: writing_style.ipynb
 		Purpose: Documentation of the process of understanding writing styles
 		How to use: Run all cells
 		Explanation of sample output: Provided in the notebook
 	
-	
-	d. Most Frequent (Noun - Adjective) Pairs for each rating
+	c. Most Frequent (Noun - Adjective) Pairs for each rating
 	
 		File name: 2.4 Most Frequent (Noun - Adjective) Pairs.ipynb
 		Purpose: Documentation of the process of retriving indicative noun-adjective pairs
@@ -58,12 +49,3 @@ Explanation of sample output:
 	Explanation of sample output: Output text is automatically generated from our GPT2 model that is finetuned on Yelp dataset (full)
 
 How to use your system(e.g command lines, input format, parameters)
-
-
-
-EXplanations of sample output obtained from your system
-
-File name:
-Purpose:
-How to use:
-Explanation of sample output:
