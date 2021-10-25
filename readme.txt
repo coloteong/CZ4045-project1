@@ -46,3 +46,28 @@ An installation guide on how to setup your system
                     4. Type prompt and enter
 	Explanation of sample output: Output text is automatically generated from our GPT2 model that is finetuned on Yelp dataset (full)
 
+Directory:
+
+├── 3.2\ Most\ Frequent\ Noun-Adj\ Pair
+│   └── Most\ Frequent\ (Noun\ -\ Adjective)\ Pairs.ipynb
+├── 3.2\ Writing\ Style
+│   ├── __pycache__
+│   │   ├── get_random_urls.cpython-39.pyc
+│   │   └── get_urls.cpython-39.pyc
+│   ├── get_urls.py
+│   └── writing_style.ipynb
+├── 3.3\ Indicative\ Adjective\ Phrases
+│   ├── __pycache__
+│   │   ├── _get_adj_phrases.cpython-39.pyc
+│   │   └── get_adj_phrases.cpython-39.pyc
+│   └── indicative_adjective.ipynb
+├── data
+│   ├── reviewSamples20.json
+│   └── reviewSelected100.json
+├── environment.yml
+├── readme.txt
+├── run_eval.py
+├── run_lm_finetuning.py
+├── test_trainer
+└── tokenization.ipynb
+
