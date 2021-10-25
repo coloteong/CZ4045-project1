@@ -29,12 +29,7 @@ An installation guide on how to setup your system
 		How to use: Run all cells
 		Explanation of sample output: Provided in the notebook
 	
-
-<<<<<<< Updated upstream
-2. Extraction of Indicative Adjective Phrases
-=======
 4. Extraction of indicative adjective phrases
->>>>>>> Stashed changes
 
 	File name: '3.3 Indicative Adjective Phrases'/indicative_adjective.ipynb
 	Purpose: Documentation of the process of retrieving indicative adjective phrases
