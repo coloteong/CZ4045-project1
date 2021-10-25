@@ -8,7 +8,7 @@ An installation guide on how to setup your system
 	d. python -m spacy download en_core_web_sm
     Note: fasttext package may need additional steps to install, please follow https://medium.com/@oleg.tarasov/building-fasttext-python-wrapper-from-source-under-windows-68e693a68cbb to successfully install fasttext
 
-1. Dataset Analysis
+3. Dataset Analysis
 	a. Tokenization, Stemming and POS tagging
 		File name: tokenization.ipynb
 		Purpose: Documentation of the process of tokenization, stemming and POS tagging.
@@ -30,14 +30,18 @@ An installation guide on how to setup your system
 		Explanation of sample output: Provided in the notebook
 	
 
+<<<<<<< Updated upstream
 2. Extraction of Indicative Adjective Phrases
+=======
+4. Extraction of indicative adjective phrases
+>>>>>>> Stashed changes
 
 	File name: '3.3 Indicative Adjective Phrases'/indicative_adjective.ipynb
 	Purpose: Documentation of the process of retrieving indicative adjective phrases
 	How to use: Run all cells
 	Explanation of sample output: Provided in the notebook
 
-3. Application
+5. Application
 
 	Folder name: last
 	Purpose: Command line interface to generate text from prompt
